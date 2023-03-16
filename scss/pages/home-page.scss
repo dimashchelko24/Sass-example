@@ -1,0 +1,433 @@
+.home-page{
+  &_banner{
+    overflow: hidden;
+    .container{
+      @media screen and(min-width: $desktop){
+        max-width: 1400px;
+      }
+    }
+    .banner_slider{
+      position: relative;
+      display: block;
+    }
+    .slick-list{
+      background: $white;
+    }
+    .slider-item{
+      &.dvevVe{
+        @include transition(none 0s ease 0s);
+        opacity: 1;
+        filter: none;
+        transform: none;
+      }
+      height: 100vh;
+      @include flex-c;
+      @include transition(all .2s linear);
+      @media screen and(max-width: $desktop){
+        padding-left: 0;
+        background-position: 35% 50% !important;
+      }
+      @media screen and(max-width: $tablets){
+        height: auto;
+        min-height: 650px;
+      }
+      @media screen and(max-width: $phones-big){
+        //background-position: 47% 0 !important;
+        justify-content: flex-end;
+        min-height: auto;
+        background: none !important;
+      }
+      .mobile_img{
+        display: none;
+        @media screen and(max-width: $phones-big){
+          display: block;
+        }
+      }
+      h1{
+        font: 700 90px/90px $mench;
+        letter-spacing: -2px;
+        max-width: 800px;
+        margin-top: -90px;
+        @include transition(all .2s linear);
+        @media screen and(max-width: $full-hd) {
+          font-size: 50px;
+          line-height: 62px;
+          max-width: 500px;
+          margin-top: 0;
+        }
+        @media screen and(max-width: $desktop){
+          margin-bottom: 35px;
+        }
+        @media screen and(max-width: $tablets-big){
+          font-size: 40px;
+          line-height: 50px;
+        }
+        @media screen and(max-width: $phones-big){
+          font-size: 32px;
+          line-height: 36px;
+          max-width: 100%;
+          margin-bottom: 30px;
+          color: $white !important;
+        }
+      }
+      h2{
+        font: 400 30px/45px $dinPro;
+        padding: 30px 0 50px;
+        max-width: 490px;
+        opacity: .8;
+        @include transition(all .2s linear);
+        @media screen and(max-width: $full-hd){
+          font-size: 25px;
+          line-height: 35px;
+          max-width: 350px;
+        }
+        @media screen and(max-width: $desktop){
+          display: none;
+        }
+        @media screen and(min-width: $full-hd){
+          @media screen and(max-height: $tablets-big){
+            padding: 25px 0 30px;
+          }
+        }
+      }
+      .main_btn{
+        @media screen and(max-width: $phones-big){
+          margin: 0 auto;
+          color: $white !important;
+          border-color: $white !important;
+        }
+      }
+      .link_color{
+        display: none;
+      }
+      .container{
+        @media screen and(max-width: $tablets){
+          max-width: 100%;
+        }
+        @media screen and(min-width: $phones-big){
+          background: transparent !important;
+        }
+        @media screen and(max-width: $phones-big){
+          padding: 20px 0 54px;
+          text-align: center;
+          min-height: 200px;
+        }
+      }
+    }
+    .slick-dots{
+      @media screen and(max-width: $tablets-big){
+        bottom: 25px;
+      }
+      @media screen and(max-width: $phones-big){
+        bottom: 240px;
+      }
+    }
+  }
+  &_cases{
+    padding: 105px 0;
+    @media screen and(max-width: $desktop){
+      padding: 60px 0 80px;
+    }
+    @media screen and(max-width: $phones-big){
+      padding-top: 32px;
+    }
+    .main_heading{
+      @media screen and(max-width: $phones-big){
+        padding: 0 35px;
+      }
+    }
+    .arrow_down{
+      margin: 40px auto 0;
+      @media screen and(max-width: $tablets){
+        margin-top: 30px;
+        max-width: 22px;
+      }
+    }
+    .container{
+      @media screen and(max-width: $phones-big){
+        padding: 0;
+      }
+    }
+    .row{
+      margin: 50px -10px 0;
+      @media screen and(max-width: $desktop){
+        margin-top: 30px;
+      }
+      @media screen and(max-width: $tablets-big){
+        margin: 15px -5px;
+      }
+      @media screen and(max-width: $tablets){
+        margin: 35px 0 15px;
+      }
+    }
+    &_item{
+      margin-top: 20px;
+      padding: 0 10px;
+      display: block;
+      position: relative;
+      @include translateY(200px);
+      opacity: 0;
+      @include transition(all .5s ease-in-out);
+      transform-style: preserve-3d;
+      &_wr{
+        height: 100%;
+        position: relative;
+        &:hover{
+          //.descr{
+          //  @include translateY(0);
+          //  opacity: 1;
+          //  pointer-events: auto;
+          //}
+          .video_hov{
+            opacity: 1;
+          }
+        }
+        &:after{
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          @include border-radius(21px);
+          background: url("../img/shadow.png") center center/cover no-repeat;
+        }
+      }
+      &.active{
+        @include translateY(0);
+        opacity: 1;
+        .descr{
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @media screen and(max-width: $tablets-big){
+        padding: 0 5px;
+        margin-top: 10px;
+      }
+      @media screen and(max-width: $tablets){
+        padding: 0;
+        margin-top: 27px;
+      }
+      @media screen and(max-width: $phones-big){
+        padding: 0 35px;
+      }
+      &.has_big_img{
+        @media screen and(max-width: $phones-big){
+          padding: 0;
+        }
+        .home-page_cases_item_wr:after{
+          @media screen and(max-width: $phones-big){
+            @include border-radius(0);
+          }
+        }
+        img{
+          @include border-radius(21);
+          @media screen and(max-width: $phones-big){
+            @include border-radius(0);
+          }
+        }
+        .descr{
+          @media screen and(max-width: $phones-big){
+            bottom: 23px;
+            left: 55px;
+          }
+        }
+      }
+      .desktop_img{
+        height: 100%;
+        position: relative;
+        @media screen and(max-width: $phones-big){
+          img{
+            width: 100%;
+          }
+        }
+        @media screen and(max-width: $phones){
+          max-height: 180px;
+          min-height: 180px;
+        }
+        &.has_mobile{
+          @media screen and(max-width: $tablets){
+            display: none;
+          }
+        }
+      }
+      .video_hov{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        @include border-radius(21px);
+        opacity: 0;
+        @media screen and(max-width: $tablets){
+          display: none;
+        }
+      }
+      .mob_img{
+        display: none;
+        @media screen and(max-width: $tablets){
+          display: block;
+          max-height: 695px;
+          height: 100%;
+          img{
+            width: 100%;
+          }
+        }
+        @media screen and(max-width: $phones-big){
+          max-height: initial;
+        }
+        @media screen and(max-width: $phones){
+          max-height: 180px;
+          min-height: 180px;
+        }
+      }
+      .post-thumbnail{
+        @include border-radius(21px);
+        height: 100%;
+        @media screen and(max-width: $tablets){
+          min-height: 310px;
+        }
+        @media screen and(max-width: $phones-big){
+          min-height: inherit;
+        }
+      }
+      img{
+        @include border-radius(21px);
+        height: 100%;
+        width: 100%;
+      }
+      .descr{
+        position: absolute;
+        bottom: 27px;
+        left: 35px;
+        z-index: 3;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate3d(0,50%,0);
+        @include transition( .5s all .3s ease-in-out);
+        @media screen and(max-width: $tablets-big){
+          bottom: 20px;
+          left: 20px;
+        }
+        @media screen and(max-width: $tablets){
+          bottom: 14px;
+          opacity: 1;
+          @include translateY(0);
+        }
+        p{
+          font-weight: 300;
+          color: $white;
+        }
+        .title{
+          max-width: 290px;
+          display: block;
+          font-weight: 700;
+          @media screen and(max-width: $desktop){
+            max-width: 220px;
+          }
+        }
+      }
+    }
+  }
+  &_about{
+    padding: 145px 0 175px;
+    margin: -90px 0 -200px;
+    background: $light_grey;
+    @media screen and(max-width: $tablets-big){
+      margin: -100px 0;
+      padding: 120px 0;
+    }
+    @media screen and(max-width: $phones-big){
+      padding: 185px 0;
+    }
+    .mobile_image{
+      margin: 0 auto;
+      display: none;
+      @media screen and(max-width: $tablets){
+        max-width: 500px;
+        display: block;
+      }
+      @media screen and(max-width: $phones-big){
+        max-width: 85%;
+      }
+    }
+    .symbol{
+      position: relative;
+      text-align: center;
+      .symbol_video{
+        margin: 0 auto;
+        max-width: 750px;
+        @media screen and(max-width: $desktop){
+          max-width: 550px;
+        }
+        @media screen and(max-width: $tablets-big){
+          max-width: 400px;
+        }
+        @media screen and(max-width: $tablets){
+          display: none;
+        }
+      }
+      &_info{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%,-50%);
+        @media screen and(max-width: $phones-big){
+          position: static;
+          @include translate(0,0);
+        }
+        .main_heading{
+          min-width: 1100px;
+          @media screen and(max-width: $full-hd){
+            min-width: 900px;
+          }
+          @media screen and(max-width: $tablets-big){
+            min-width: 600px;
+          }
+          @media screen and(max-width: $tablets){
+            min-width: 340px;
+          }
+          @media screen and(max-width: $phones-big){
+           display: none;
+          }
+        }
+        .main_btn{
+          max-width: 360px;
+          margin: 50px auto 0;
+          color: $dark_blue;
+          @media screen and(max-width: $tablets-big){
+            margin-top: 25px;
+          }
+          @media screen and(max-width: $tablets){
+            max-width: 220px;
+          }
+          @media screen and(max-width: $phones-big){
+            margin-top: 17px;
+          }
+          &:hover{
+            color: $white;
+          }
+        }
+      }
+      .hidden_heading{
+        display: none;
+        @media screen and(max-width: $phones-big){
+          display: block;
+          font-size: 30px;
+          line-height: 35px;
+          min-width: 300px;
+          padding: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include translate(-50%,-60%);
+        }
+      }
+    }
+  }
+}

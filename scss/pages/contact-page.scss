@@ -1,0 +1,190 @@
+.contact-page{
+  &_banner{
+    padding: 270px 0 310px;
+    text-align: center;
+    @media screen and(max-width: $tablets-big){
+      padding: 200px 0 300px;
+    }
+    @media screen and(max-width: $tablets-big){
+      padding: 200px 0;
+    }
+    @media screen and(max-width: $tablets){
+      padding: 220px 0 120px;
+    }
+    .main_heading{
+      color: $white;
+      margin-bottom: 0;
+      @media screen and(max-width: $tablets-big){
+        font-size: 32px;
+        line-height: 36px;
+      }
+      @media screen and(max-width: $phones-big){
+        text-align: left;
+        max-width: 260px;
+        margin-left: 35px;
+      }
+    }
+  }
+  &_links{
+    margin-top: -100px;
+    @media screen and(max-width: $tablets-big){
+      margin-top: -80px;
+    }
+    @media screen and(max-width: $phones-big){
+      margin-top: 0;
+      padding-top: 40px;
+    }
+    .container{
+      display: flex;
+      justify-content: space-between;
+      @media screen and(min-width: $full-hd){
+        max-width: 1400px;
+      }
+      @media screen and(max-width: $desktop){
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    }
+    &_item{
+      @include border-radius(21px);
+      padding: 30px 40px 90px;
+      flex-basis: 32.5%;
+      color: $dark_blue;
+      background: $light_blue;
+      text-align: center;
+      position: relative;
+      @media screen and(max-width: $full-hd){
+        padding: 30px 30px 90px;
+      }
+      @media screen and(max-width: $desktop){
+        flex-basis: 48%;
+      }
+      @media screen and(max-width: $tablets-big){
+        flex-basis: 100%;
+        padding: 40px;
+      }
+      @media screen and(max-width: $phones-big){
+        padding: 40px 35px 50px;
+      }
+      &:nth-child(2){
+        @media screen and(max-width: $tablets-big){
+          margin-top: 35px;
+        }
+      }
+      &:last-child{
+        @media screen and(max-width: $desktop){
+          margin-top: 35px;
+        }
+      }
+      .second_heading{
+        font-weight: 700;
+      }
+      p{
+        padding: 20px 0 40px;
+        font: 400 20px $dinPro;
+        @media screen and(max-width: $phones-big){
+          padding-bottom: 30px;
+        }
+      }
+      .main_btn{
+        width: 100%;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        @include translateX(-50%);
+        @media screen and(max-width: $tablets-big){
+          position: static;
+          @include translateX(0);
+          margin: 0 auto;
+        }
+        @media screen and(max-width: $phones-big){
+          max-width: 170px;
+        }
+      }
+    }
+  }
+  &_locations{
+    padding: 170px 0;
+    @media screen and(max-width: $full-hd){
+      padding-top: 120px;
+    }
+    @media screen and(max-width: $tablets-big){
+      padding: 90px 0;
+    }
+    .text_center{
+      @media screen and(max-width: $tablets-big){
+        text-align: center;
+      }
+    }
+    &_wr{
+      margin-top: 140px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 160px;
+      grid-row-gap: 70px;
+      @media screen and(max-width: $full-hd){
+        margin-top: 70px;
+        grid-column-gap: 70px;
+      }
+      @media screen and(max-width: $tablets-big){
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+      }
+      @media screen and(max-width: $phones-big){
+        grid-column-gap: 0;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    &_item{
+      border-bottom: 1px solid $border_color;
+      padding-bottom: 60px;
+      @media screen and(max-width: $tablets-big){
+        padding-bottom: 40px;
+      }
+      .top_section{
+        font: 700 26px $mench;
+        color: $black;
+        @media screen and(max-width: $phones-big){
+          font-size: 16px;
+        }
+      }
+      .bottom_section{
+        font: 400 19px/23px $dino;
+        padding-top: 20px;
+        @media screen and(max-width: $phones-big){
+          font-size: 15px;
+          line-height: 18px;
+        }
+        .contact_links{
+          margin: 20px 0;
+          a{
+            display: block;
+            font: 400 19px/23px $dino;
+            color: $black;
+            @media screen and(max-width: $phones-big){
+              font-size: 15px;
+              line-height: 18px;
+            }
+          }
+        }
+        .direction{
+          text-decoration: underline;
+          color: $pink;
+          font: 400 19px/23px $dino;
+          @media screen and(max-width: $phones-big){
+            font-size: 15px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+  .talk{
+    margin-bottom: 0;
+    padding: 0 0 80px;
+    @media screen and(max-width: $tablets){
+      padding-bottom: 0 !important;
+    }
+  }
+}

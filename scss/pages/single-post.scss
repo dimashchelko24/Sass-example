@@ -1,0 +1,104 @@
+.single-post{
+  &_banner{
+    height: 100vh;
+    position: relative;
+    @media screen and(max-width: $phones-big){
+      height: auto;
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: flex-end;
+      padding-bottom: 30px;
+    }
+    .container{
+      @include flex-c;
+      justify-content: center;
+      height: 100%;
+      padding-top: 50px;
+      color: $white;
+      @media screen and(max-width: $phones-big){
+        padding-top: 0;
+      }
+    }
+    .big_heading{
+      color: $white;
+      text-align: left;
+      max-width: 750px;
+      margin-bottom: 20px;
+      line-height: 70px;
+      @media screen and(max-width: $full-hd){
+        max-width: 600px;
+      }
+      @media screen and(max-width: $tablets){
+        max-width: 300px;
+        line-height: 40px;
+      }
+      @media screen and(max-width: $phones-big){
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+  }
+  padding-bottom: 80px;
+  .view_all{
+    text-align: center;
+    padding-top: 60px;
+    @media screen and(max-width: $phones-big){
+      margin-top: 30px;
+    }
+    .main_btn{
+      margin: 0 auto;
+      max-width: 270px;
+      @media screen and(max-width: $tablets){
+        max-width: 185px;
+      }
+    }
+  }
+}
+
+.body_container{
+  padding-top: 65px;
+  @media screen and(max-width: $phones-big){
+    padding-top: 40px;
+  }
+  h1, h2{
+    @extend .main_heading;
+    text-align: left;
+    max-width: 900px;
+  }
+  p{
+    padding-top: 20px;
+    @media screen and(max-width: $phones-big){
+      padding-top: 10px;
+    }
+  }
+  img{
+    margin-top: 35px;
+    width: auto;
+    height: auto;
+    @media screen and(max-width: $phones-big){
+      margin-top: 20px;
+    }
+  }
+  a{
+    font: 700 22px/28px $mench;
+    color: $dark_blue;
+    position: relative;
+    @media screen and(max-width: $phones-big){
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      background: url("../img/icons/arrow_link.svg") no-repeat;
+      @include translateY(-18%);
+      width: 8px;
+      height: 14px;
+    }
+  }
+}

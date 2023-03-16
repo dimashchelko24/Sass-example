@@ -1,0 +1,19 @@
+.not-found{
+  padding: 120px 0;
+  min-height: calc(100vh - 318px);
+  background: $dark_blue;
+  @include flex-c;
+  @media screen and(max-width: $tablets-big){
+    min-height: calc(100vh - 244px);
+  }
+  @media screen and(max-width: $tablets){
+    min-height: auto;
+    padding: 120px 0;
+  }
+  .main_heading{
+    color: $white;
+  }
+  .main_btn{
+    margin: 20px auto 0;
+  }
+}

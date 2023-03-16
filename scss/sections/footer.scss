@@ -1,0 +1,113 @@
+.page-template-template-homepage{
+    .footer{
+        padding-top: 280px;
+        @media screen and(max-width: $desktop){
+            padding-top: 180px;
+        }
+        @media screen and(max-width: $tablets-big){
+            padding: 60px 0 35px;
+        }
+    }
+}
+
+.footer{
+	background: $light_grey;
+	padding: 90px 0;
+	@media screen and(max-width: $tablets-big){
+	    padding: 60px 0 35px;
+	}
+	.container{
+	    @include flex-b();
+	    @media screen and(max-width: $tablets){
+	        display: block;
+	        text-align: center;
+	    }
+	}
+	.logo_desktop img{
+	    @media screen and(max-width: $tablets){
+	        margin: 0 auto;
+	    }
+	    @media screen and(max-width: $tablets){
+	        max-width: 195px;
+	    }
+	}
+	&_right{
+	    display: flex;
+	    flex-direction: column;
+	    align-items: flex-end;
+	    @media screen and(max-width: $tablets){
+	        display: block;
+	    }
+	    ul{
+	        display: flex;
+	        align-items: center;
+	        @media screen and(max-width: $tablets){
+	            display: block;
+	            margin: 30px 0 50px;
+	        }
+	        li{
+	            margin-left: 25px;
+	            @media screen and(max-width: $tablets){
+	                margin: 15px 0 0 0;
+	            }
+	            &:first-child{
+	                margin-left: 0;
+	                @media screen and(max-width: $tablets){
+	                    margin-top: 0;
+	                }
+	            }
+	            a{
+	                font: 700 20px/35px $mench;
+	                color: $grey;
+	                @include transition(all .2s linear);
+	                &:hover{
+                      color: $preloader_bg;
+                    }
+	            }
+	        }
+	    }
+	    .social{
+	        display: flex;
+            align-items: center;
+            margin: 20px 0 30px;
+            @media screen and(max-width: $tablets-big){
+                margin: 30px 0;
+            }
+            @media screen and(max-width: $tablets){
+                justify-content: center;
+            }
+            a{
+                margin-left: 30px;
+                @include transition(all .2s linear);
+                &:first-child{
+                    margin-left: 0;
+                }
+                .icon{
+                    font-size: 34px;
+                    @media screen and(max-width: $phones-big){
+                        font-size: 25px;
+                    }
+                     &:hover:before{
+                        color: $preloader_bg;
+                    }
+                }
+            }
+	    }
+	    p{
+	        color: $grey;
+	        font: 300 12px $dino;
+	        a{
+	            color: $grey;
+	            &:hover{
+	                text-decoration: underline;
+	            }
+	            &:first-child{
+	                margin-left: 20px;
+	                @media screen and(max-width: $tablets){
+	                    margin-left: 0;
+	                }
+	            }
+	        }
+	    }
+	}
+}

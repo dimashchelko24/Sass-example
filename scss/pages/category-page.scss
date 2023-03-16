@@ -1,0 +1,42 @@
+.category{
+  .header {
+    .logo_desktop svg{
+      fill: $dark_blue;
+    }
+    .burger .bar{
+      background: $dark_blue;
+    }
+  }
+}
+.category-page{
+  &_banner{
+    padding-top: 160px;
+    text-align: center;
+    @media screen and(max-width: $tablets){
+      padding-top: 120px;
+    }
+    .main_heading{
+      text-align: left;
+    }
+  }
+  &_content{
+    padding: 120px 0;
+    @media screen and(max-width: $tablets-big){
+      padding: 60px 0;
+    }
+    @media screen and(max-width: $tablets){
+      padding-top: 30px;
+    }
+    .article_wr{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 42px;
+      grid-row-gap: 115px;
+      @media screen and(max-width: $tablets-big){
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 75px;
+      }
+    }
+  }
+}
